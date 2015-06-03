@@ -395,6 +395,9 @@ try:
     def fromYAML(*args, **kwargs):
         return bunchify( yaml.load(*args, **kwargs) )
     
+    def fromYAML_safe(*args, **kwargs):
+        return bunchify( yaml.safe_load(*args, **kwargs) )    
+    
     Bunch.toYAML = toYAML
     Bunch.fromYAML = staticmethod(fromYAML)
     
